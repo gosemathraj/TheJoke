@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TheJoke</string>
+
+    <string name="pointerIcon">\uea04</string>
+</resources>

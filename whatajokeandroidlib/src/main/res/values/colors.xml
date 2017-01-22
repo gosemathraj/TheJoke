@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff6f00</color>
+    <color name="colorPrimaryDark">#e65100</color>
+    <color name="colorAccent">#f57f17</color>
+
+
+    <color name="redLight">#f44336</color>
+    <color name="purpleLight">#ba68c8</color>
+    <color name="pinkLight">#f50057</color>
+    <color name="safronLight">#ff8f00</color>
+    <color name="darkBrown">#3e2723</color>
+    <color name="yellow">#f1c21e</color>
+    <color name="borderColor">#eeeeee</color>
+    <color name="witeLight">#fafafa</color>
+    <color name="white">#ffffff</color>
+
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/size16dp"
+    android:background="@color/witeLight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:padding="@dimen/size16dp"
+        android:layout_above="@+id/bottomButtons"
+        android:background="@drawable/solidbackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/jokeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="JOKES"
+                    android:textSize="@dimen/textsize20sp"
+                    android:gravity="center"/>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/husbandwife"
+        android:layout_centerHorizontal="true"
+        app:civ_border_width="4dp"
+        app:civ_border_color="#f1c21e"/>
+
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/size8dp">
+
+        <TextView
+            android:id="@+id/previousJokeText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size36dp"
+            android:layout_weight="1"
+            android:text="Previous"
+            android:gravity="center"
+            android:background="@drawable/buttonbackground"
+            android:layout_margin="@dimen/size8dp"/>
+
+        <TextView
+            android:id="@+id/nextJokeText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size36dp"
+            android:layout_weight="1"
+            android:text="Next"
+            android:gravity="center"
+            android:background="@drawable/buttonbackground"
+            android:layout_margin="@dimen/size8dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
