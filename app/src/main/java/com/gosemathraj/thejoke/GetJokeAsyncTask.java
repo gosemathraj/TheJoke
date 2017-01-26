@@ -1,7 +1,6 @@
 package com.gosemathraj.thejoke;
 
 import android.os.AsyncTask;
-import android.support.v4.app.Fragment;
 
 import com.example.iamsparsh.myapplication.backend.myApi.MyApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
