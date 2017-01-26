@@ -22,7 +22,7 @@ import java.util.ArrayList;
 /**
  * Created by iamsparsh on 19/1/17.
  */
-public class HomeFragment extends Fragment implements View.OnClickListener,GetJokeAsyncTask.OnJokesFetched{
+public class HomeFragment extends Fragment implements View.OnClickListener,JokeListener{
 
     private View view;
     private int categoryId;
@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener,GetJo
     private void initAd(final ArrayList<String> strings) {
 
         mInterstitialAd = new InterstitialAd(getActivity());
-        mInterstitialAd.setAdUnitId("ca-app-pub-3764011845414430/8089995906");
+        mInterstitialAd.setAdUnitId(getString(R.string.interstitialAds));
         AdRequest adRequest = new AdRequest.Builder().build();
         mInterstitialAd.loadAd(adRequest);
 
@@ -110,14 +110,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener,GetJo
     public void onClick(View view) {
 
         showProgressDialog();
-        switch (view.getId()){
+        switch (view.getId()) {
 
             case R.id.categoryOne:
                 categoryId = 0;
                 break;
 
             case R.id.categoryTwo:
-                categoryId= 1;
+                categoryId = 1;
                 break;
 
             case R.id.categoryThree:
@@ -141,7 +141,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener,GetJo
                 break;
 
         }
-
         new GetJokeAsyncTask(this).execute(categoryId);
     }
 
@@ -152,17 +151,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener,GetJo
         progressDialog.setCancelable(false);
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
-    }
-
-    @Override
-    public void onJokesListfetched(ArrayList<String> strings) {
-
-        if(strings != null){
-            initAd(strings);
-        }else{
-            progressDialog.dismiss();
-            showDialog();
-        }
     }
 
     private void showDialog() {
@@ -187,5 +175,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener,GetJo
         intent.putStringArrayListExtra("jokesList",strings);
         startActivity(intent);
 
+    }
+
+    @Override
+    public void onJokeReceived(ArrayList<String> strings) {
+
+        if(strings != null){
+            initAd(strings);
+        }else{
+            progressDialog.dismiss();
+            showDialog();
+        }
     }
 }

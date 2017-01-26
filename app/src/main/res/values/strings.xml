@@ -2,4 +2,13 @@
     <string name="app_name">TheJoke</string>
 
     <string name="pointerIcon">\uea04</string>
+    <string name="categoryTitle">Categories</string>
+    <string name="oneLiners">Classic One Liners</string>
+    <string name="funnyJokes">Funny Jokes</string>
+    <string name="husbandAndWife">Husband and Wife</string>
+    <string name="teacherSpecial">Teachers Special</string>
+    <string name="insults">Feel The Insult</string>
+    <string name="santaBanta">Santa Banta Jokes</string>
+    <string name="doctorSpecial">Doctors Special</string>
+
 </resources>

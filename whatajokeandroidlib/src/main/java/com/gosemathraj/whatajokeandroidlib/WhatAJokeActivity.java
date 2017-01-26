@@ -5,12 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -79,12 +76,11 @@ public class WhatAJokeActivity extends AppCompatActivity {
             if(!previousText.isEnabled()){
                 previousText.setEnabled(true);
             }
-            if(count + 1 == jokesList.size()){
+            if(count == jokesList.size() - 2) {
                 nextText.setEnabled(false);
-            }else{
-                setImageResource();
-                count = count + 1;
             }
+            setImageResource();
+            count = count + 1;
             jokeText.setText(jokesList.get(count));
         }
     });
@@ -96,12 +92,11 @@ public class WhatAJokeActivity extends AppCompatActivity {
                 if(!nextText.isEnabled()){
                     nextText.setEnabled(true);
                 }
-                if(count  == 0){
+                if(count  == 1){
                     previousText.setEnabled(false);
-                }else{
-                    setImageResource();
-                    count = count - 1;
                 }
+                setImageResource();
+                count = count - 1;
                 jokeText.setText(jokesList.get(count));
             }
         });

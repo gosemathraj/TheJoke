@@ -9,21 +9,21 @@
     android:orientation="vertical"
     android:padding="@dimen/size16dp">
 
-    <TextView
+    <com.gosemathraj.thejoke.CustomTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Categories"
+        android:text="@string/categoryTitle"
         android:gravity="center"
         android:textSize="@dimen/textsize28sp"
-        android:textColor="@color/yellow"
-        android:textStyle="bold"/>
+        android:textColor="@color/yellow"/>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/size24dp"
         android:layout_marginRight="@dimen/size8dp"
-        android:layout_marginLeft="@dimen/size8dp">
+        android:layout_marginLeft="@dimen/size8dp"
+        android:layout_marginBottom="@dimen/size8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:id="@+id/categoryOne"
             android:padding="@dimen/size8dp">
 
-            <com.gosemathraj.thejoke.CustomIcons
+            <com.gosemathraj.thejoke.CustomIconTextView
                 android:layout_width="@dimen/boxHeight"
                 android:layout_height="@dimen/boxHeight"
                 android:text="@string/pointerIcon"
@@ -40,13 +40,12 @@
                 android:gravity="center"
                 android:textColor="@color/redLight"/>
 
-            <TextView
+            <com.gosemathraj.thejoke.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Classic One Liners"
+                android:text="@string/oneLiners"
                 android:textSize="@dimen/textsize18sp"
-                android:layout_gravity="center_vertical"
-                android:textStyle="bold"/>
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
 
@@ -64,7 +63,7 @@
             android:id="@+id/categoryTwo"
             android:padding="@dimen/size8dp">
 
-            <com.gosemathraj.thejoke.CustomIcons
+            <com.gosemathraj.thejoke.CustomIconTextView
                 android:layout_width="@dimen/boxHeight"
                 android:layout_height="@dimen/boxHeight"
                 android:text="@string/pointerIcon"
@@ -72,13 +71,12 @@
                 android:gravity="center"
                 android:textColor="@color/purpleLight"/>
 
-            <TextView
+            <com.gosemathraj.thejoke.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Funny Jokes"
+                android:text="@string/funnyJokes"
                 android:textSize="@dimen/textsize18sp"
-                android:layout_gravity="center_vertical"
-                android:textStyle="bold"/>
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
 
@@ -96,7 +94,7 @@
             android:id="@+id/categoryThree"
             android:padding="@dimen/size8dp">
 
-            <com.gosemathraj.thejoke.CustomIcons
+            <com.gosemathraj.thejoke.CustomIconTextView
                 android:layout_width="@dimen/boxHeight"
                 android:layout_height="@dimen/boxHeight"
                 android:text="@string/pointerIcon"
@@ -104,13 +102,12 @@
                 android:gravity="center"
                 android:textColor="@color/darkBrown"/>
 
-            <TextView
+            <com.gosemathraj.thejoke.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Husband and Wife"
+                android:text="@string/husbandAndWife"
                 android:textSize="@dimen/textsize18sp"
-                android:layout_gravity="center_vertical"
-                android:textStyle="bold"/>
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
 
@@ -128,7 +125,7 @@
             android:id="@+id/categoryFour"
             android:padding="@dimen/size8dp">
 
-            <com.gosemathraj.thejoke.CustomIcons
+            <com.gosemathraj.thejoke.CustomIconTextView
                 android:layout_width="@dimen/boxHeight"
                 android:layout_height="@dimen/boxHeight"
                 android:text="@string/pointerIcon"
@@ -136,13 +133,12 @@
                 android:gravity="center"
                 android:textColor="@color/safronLight"/>
 
-            <TextView
+            <com.gosemathraj.thejoke.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Teachers Special"
+                android:text="@string/teacherSpecial"
                 android:textSize="@dimen/textsize18sp"
-                android:layout_gravity="center_vertical"
-                android:textStyle="bold"/>
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
 
@@ -160,21 +156,20 @@
             android:id="@+id/categoryFive"
             android:padding="@dimen/size8dp">
 
-            <com.gosemathraj.thejoke.CustomIcons
+            <com.gosemathraj.thejoke.CustomIconTextView
                 android:layout_width="@dimen/boxHeight"
                 android:layout_height="@dimen/boxHeight"
                 android:text="@string/pointerIcon"
                 android:textSize="@dimen/textsize48sp"
                 android:gravity="center"
-                android:textColor="@color/pinkLight"/>
+                android:textColor="@color/green"/>
 
-            <TextView
+            <com.gosemathraj.thejoke.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Feel The Insult"
+                android:text="@string/insults"
                 android:textSize="@dimen/textsize18sp"
-                android:layout_gravity="center_vertical"
-                android:textStyle="bold"/>
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
 
@@ -183,9 +178,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/size24dp"
-        android:layout_marginRight="@dimen/size8dp"
-        android:layout_marginLeft="@dimen/size8dp">
+        android:layout_margin="@dimen/size8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -194,21 +187,20 @@
             android:id="@+id/categorySix"
             android:padding="@dimen/size8dp">
 
-            <com.gosemathraj.thejoke.CustomIcons
+            <com.gosemathraj.thejoke.CustomIconTextView
                 android:layout_width="@dimen/boxHeight"
                 android:layout_height="@dimen/boxHeight"
                 android:text="@string/pointerIcon"
                 android:textSize="@dimen/textsize48sp"
                 android:gravity="center"
-                android:textColor="@color/redLight"/>
+                android:textColor="@color/darkGrey"/>
 
-            <TextView
+            <com.gosemathraj.thejoke.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Santa Banta Jokes"
+                android:text="@string/santaBanta"
                 android:textSize="@dimen/textsize18sp"
-                android:layout_gravity="center_vertical"
-                android:textStyle="bold"/>
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
 
@@ -217,9 +209,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/size24dp"
-        android:layout_marginRight="@dimen/size8dp"
-        android:layout_marginLeft="@dimen/size8dp">
+        android:layout_margin="@dimen/size8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -228,21 +218,20 @@
             android:id="@+id/categorySeven"
             android:padding="@dimen/size8dp">
 
-            <com.gosemathraj.thejoke.CustomIcons
+            <com.gosemathraj.thejoke.CustomIconTextView
                 android:layout_width="@dimen/boxHeight"
                 android:layout_height="@dimen/boxHeight"
                 android:text="@string/pointerIcon"
                 android:textSize="@dimen/textsize48sp"
                 android:gravity="center"
-                android:textColor="@color/redLight"/>
+                android:textColor="@color/pinkLight"/>
 
-            <TextView
+            <com.gosemathraj.thejoke.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Doctors Special"
+                android:text="@string/doctorSpecial"
                 android:textSize="@dimen/textsize18sp"
-                android:layout_gravity="center_vertical"
-                android:textStyle="bold"/>
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
 

@@ -19,14 +19,14 @@ import java.util.ArrayList;
 public class GetJokeAsyncTask extends AsyncTask<Integer, Void, ArrayList<String>> {
 
     private MyApi jokeApiService = null;
-    private OnJokesFetched onJokesFetched;
+    private JokeListener jokeListener;
 
-    public GetJokeAsyncTask(Fragment onJokesFetched) {
-        this.onJokesFetched = (OnJokesFetched) onJokesFetched;
+    public GetJokeAsyncTask(JokeListener jokeListener) {
+        this.jokeListener = jokeListener;
     }
 
     @Override
-    protected ArrayList<String> doInBackground(Integer... integers) {
+    protected ArrayList<String> doInBackground(Integer... params )  {
 
         if(jokeApiService == null){
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),new AndroidJsonFactory(),null)
@@ -42,7 +42,7 @@ public class GetJokeAsyncTask extends AsyncTask<Integer, Void, ArrayList<String>
         }
 
         try{
-            return (ArrayList<String>) jokeApiService.getJoke(integers[0]).execute().getJokesList();
+            return (ArrayList<String>) jokeApiService.getJoke(params[0]).execute().getJokesList();
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -53,11 +53,6 @@ public class GetJokeAsyncTask extends AsyncTask<Integer, Void, ArrayList<String>
     protected void onPostExecute(ArrayList<String> strings) {
         super.onPostExecute(strings);
 
-        onJokesFetched.onJokesListfetched(strings);
-    }
-
-    interface OnJokesFetched{
-
-        void onJokesListfetched(ArrayList<String> strings);
+        jokeListener.onJokeReceived(strings);
     }
 }

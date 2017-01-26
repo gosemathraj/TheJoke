@@ -11,6 +11,8 @@
     <color name="safronLight">#ff8f00</color>
     <color name="darkBrown">#3e2723</color>
     <color name="yellow">#f1c21e</color>
+    <color name="green">#33691e</color>
+    <color name="darkGrey">#212121</color>
     <color name="borderColor">#eeeeee</color>
 
 </resources>
